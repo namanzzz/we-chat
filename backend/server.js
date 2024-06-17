@@ -6,11 +6,13 @@ import dotenv from 'dotenv'
 import authRoutes from './routes/authRoutes.js'
 import connectToMongoDB from './db/connectToMongoDB.js';
 
-const app = express();
+const app = express(); 
 const PORT = process.env.PORT || 3000;
 dotenv.config();
 
-app.use(express.json()) //
+app.use(express.json()) // parse incoming reqests with json payloads(from req.body)
+
+
 app.use('/api/auth', authRoutes)
 
 // app.get('/',(req,res)=>{

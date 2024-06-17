@@ -15,9 +15,9 @@ app.use(express.json()) // parse incoming reqests with json payloads(from req.bo
 
 app.use('/api/auth', authRoutes)
 
-// app.get('/',(req,res)=>{
-//     res.send('Hellooo Brother!');
-// })
+app.get('/',(req,res)=>{
+    res.send('Hellooo Broter!');
+})
 
 
 

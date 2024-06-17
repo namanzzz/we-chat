@@ -10,11 +10,14 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 dotenv.config();
 
-app.get('/',(req,res)=>{
-    res.send('Hellooo Brother!');
-})
+app.use(express.json()) //
+app.use('/api/auth', authRoutes)
 
-app.use('/api/auth',authRoutes)
+// app.get('/',(req,res)=>{
+//     res.send('Hellooo Brother!');
+// })
+
+
 
 
 app.listen(PORT, ()=>{
